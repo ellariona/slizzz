@@ -12,42 +12,58 @@ public class PersonTest {
     Person fourthPerson = new Person();
 
     @Test
-    void setFirstName() {
+    void testSetFirstName() {
         fourthPerson.setFirstName(null);
         firstPerson.setFirstName("Ivan");
         assertEquals(firstPerson.getFirstName(), "Ivan");
     }
 
     @Test
-    void setLastName() {
+    void testSetLastName() {
         fourthPerson.setLastName(null);
         firstPerson.setLastName("Ivanov");
     }
 
     @Test
-    void setPassportId() {
+    void testSetPassportId() {
         thirdPerson.setPassportId(334562);
         assertEquals(thirdPerson.getPassportId(), 334562);
     }
 
     @Test
-    void getFirstName() {
+    void testGetFirstName() {
         assertNull(fourthPerson.getFirstName());
         assertNull(thirdPerson.getFirstName());
         assertEquals(secondPerson.getFirstName(), "Liza");
     }
 
     @Test
-    void getLastName() {
+    void testGetLastName() {
         assertNull(fourthPerson.getLastName());
         assertNull(thirdPerson.getLastName());
         assertEquals(secondPerson.getLastName(), "Serebrykova");
     }
 
     @Test
-    void getPassportId() {
+    void testGetPassportId() {
         assertEquals(firstPerson.getPassportId(), 0);
         assertEquals(thirdPerson.getPassportId(), 3321);
+    }
+
+    @Test
+    void testGetGender() {
+        thirdPerson.setGender(Gender.MALE);
+        assertEquals(thirdPerson.getGender(), Gender.MALE);
+        fourthPerson.setGender(Gender.FEMALE);
+        assertEquals(fourthPerson.getGender(), Gender.FEMALE);
+    }
+
+    @Test
+    public void testSetGender() {
+        firstPerson.setGender(Gender.MALE);
+        assertEquals(firstPerson.getGender(), Gender.MALE);
+        secondPerson.setGender(Gender.FEMALE);
+        assertEquals(secondPerson.getGender(), Gender.FEMALE);
     }
 
 }

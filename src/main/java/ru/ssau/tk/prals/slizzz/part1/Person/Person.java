@@ -6,42 +6,50 @@ public class Person {
     private String firstName;
     private String lastName;
     private int passportId;
+    private Gender gender;
 
+    Gender getGender() {
+        return gender;
+    }
 
-    public String getFirstName() {
+    void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public int getPassportId() {
+    int getPassportId() {
         return passportId;
     }
 
-    public void setPassportId(int passportId) {
+    void setPassportId(int passportId) {
         this.passportId = passportId;
     }
 
     //Task 2
-    public Person() {
+    Person() {
     }
 
-    public Person(String firstName, String lastName) {
+    Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public Person(int passportId) {
+    Person(int passportId) {
         this.passportId = passportId;
     }
 
