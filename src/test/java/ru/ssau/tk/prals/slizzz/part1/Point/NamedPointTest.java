@@ -26,4 +26,14 @@ public class NamedPointTest {
         thirdPoint.setName("Five");
         assertEquals(thirdPoint.getName(), "Five");
     }
+
+    @Test
+    public void testReset()
+    {
+        firstPoint.reset();
+        assertEquals(firstPoint.getName(), "Absent");
+        thirdPoint.reset();
+        assertEquals(thirdPoint.getName(), "Absent");
+    }
+
 }
