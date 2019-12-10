@@ -61,8 +61,8 @@ public class SomeArrayTest {
     public void testCreateSomeArraySquareEquation() {
         double[] array = SomeArray.createSomeArraySquareEquation(3, -11, 10);
         assertEquals(array[0], 2, 0.001);
-        assertEquals(array[1], 5./3, 0.001);
-        double[] arrayOne = SomeArray.createSomeArraySquareEquation( 2, -8, 8);
+        assertEquals(array[1], 5. / 3, 0.001);
+        double[] arrayOne = SomeArray.createSomeArraySquareEquation(2, -8, 8);
         assertEquals(arrayOne[0], 2, 0.001);
     }
 
@@ -74,4 +74,11 @@ public class SomeArrayTest {
         }
     }
 
+    @Test
+    public void createSomeArrayArithmeticProgression() {
+        double[] array = SomeArray.createSomeArrayArithmeticProgression(lengthArrayTest, 3, 13);
+        for (int i = 1; i < lengthArrayTest; i++) {
+            assertEquals(array[i] - array[i - 1], 13, 0.001);
+        }
+    }
 }

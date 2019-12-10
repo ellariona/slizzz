@@ -92,4 +92,14 @@ public class SomeArray {
         }
         return someArray;
     }
+
+    //Task9
+    public static double[] createSomeArrayArithmeticProgression(int length, int firstElement, int difference) {
+        double[] someArray = new double[length];
+        someArray[0] = firstElement;
+        for (int i = 1; i < length; i++) {
+            someArray[i] = someArray[i - 1] + difference;
+        }
+        return someArray;
+    }
 }
