@@ -8,12 +8,14 @@ public class SomeArrayTest {
 
     private int lengthArrayTest = 10;
 
+    //Task1
     @Test
     public void testCreateSomeArray1() {
         int[] array = SomeArray.createSomeArray1(lengthArrayTest);
         assertEquals(array.length, lengthArrayTest, 0.001);
     }
 
+    //Task2
     @Test
     public void testCreateSomeArray2() {
         int[] array = SomeArray.createSomeArray2(lengthArrayTest);
@@ -27,7 +29,7 @@ public class SomeArrayTest {
         }
     }
 
-
+    //Task3
     @Test
     public void testCreateSomeArrayRisingOdd() {
         int[] array = SomeArray.createSomeArrayRisingOdd(lengthArrayTest);
@@ -36,6 +38,7 @@ public class SomeArrayTest {
         }
     }
 
+    //Task4
     @Test
     public void testCreateSomeArrayDownEven() {
         int[] array = SomeArray.createSomeArrayDownEven(lengthArrayTest);
@@ -44,19 +47,21 @@ public class SomeArrayTest {
         }
     }
 
-
+    //Task5
     @Test
     public void testCreateSomeArrayFibonacci() {
         int[] array = SomeArray.createSomeArrayFibonacci(lengthArrayTest);
         assertEquals(array[lengthArrayTest - 1], 89, 0.001);
     }
 
+    //Task6
     @Test
     public void testCreateSomeArraySquareIndex() {
         int[] array = SomeArray.createSomeArraySquareIndex(lengthArrayTest);
         assertEquals(array[lengthArrayTest - 1], 81, 0.001);
     }
 
+    //Task7
     @Test
     public void testCreateSomeArraySquareEquation() {
         double[] array = SomeArray.createSomeArraySquareEquation(3, -11, 10);
@@ -66,6 +71,7 @@ public class SomeArrayTest {
         assertEquals(arrayOne[0], 2, 0.001);
     }
 
+    //Task8
     @Test
     public void testCreateSomeArrayNaturalNumber() {
         int[] array = SomeArray.createSomeArrayNaturalNumber(lengthArrayTest);
@@ -74,11 +80,22 @@ public class SomeArrayTest {
         }
     }
 
+    //Task9
     @Test
-    public void createSomeArrayArithmeticProgression() {
+    public void testCreateSomeArrayArithmeticProgression() {
         double[] array = SomeArray.createSomeArrayArithmeticProgression(lengthArrayTest, 3, 13);
         for (int i = 1; i < lengthArrayTest; i++) {
             assertEquals(array[i] - array[i - 1], 13, 0.001);
         }
     }
+
+    //Task10
+    @Test
+    public void testCreateSomeArrayGeometricProgression() {
+        double[] array = SomeArray.createSomeArrayGeometricProgression(lengthArrayTest, 3, 13);
+        for (int i = 1; i < lengthArrayTest; i++) {
+            assertEquals(array[i] / array[i - 1], 13, 0.001);
+        }
+    }
+
 }
