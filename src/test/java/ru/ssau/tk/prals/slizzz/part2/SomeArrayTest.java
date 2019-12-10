@@ -98,4 +98,13 @@ public class SomeArrayTest {
         }
     }
 
+    //Task11
+    @Test
+    public void testCreateSomeArrayOfDivers() {
+        int number = 15;
+        double[] array = SomeArray.createSomeArrayOfDivers(15);
+        for (double v : array) {
+            assertEquals(number % v, 0, 0.001);
+        }
+    }
 }
