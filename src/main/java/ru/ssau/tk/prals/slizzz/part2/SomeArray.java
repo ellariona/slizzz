@@ -201,5 +201,15 @@ public class SomeArray {
         return false;
     }
 
+    public static int countEvenNumbersInSomeArray(int[] someArray) {
+        int count = 0;
+        for (int value : someArray) {
+            if (value % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 }
 
