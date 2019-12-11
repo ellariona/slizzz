@@ -108,7 +108,7 @@ public class SomeArrayTest {
         }
     }
 
-    //Task 12
+    //Task12
     @Test
     public void testCreateSomeArrayPrimeNumbers() {
         var array = SomeArray.createSomeArrayPrimeNumbers(21);
@@ -118,12 +118,22 @@ public class SomeArrayTest {
         }
     }
 
-    //Task 13
+    //Task13
     @Test
     public void testCreateSomeArraySymmetric() {
         int[] array = SomeArray.createSomeArraySymmetric(lengthArrayTest);
         for (int i = 0; i < array.length; i++) {
             assertEquals(array[i], array[lengthArrayTest - i - 1], 0.001);
+        }
+    }
+
+    //Task14
+    @Test
+    public void testOppositeSomeArray() {
+        double[] value = {1.2, 3.4, 5.4, 1.2};
+        double[] array = SomeArray.oppositeSomeArray(value);
+        for (double v : array) {
+            assertEquals(-v, -v, 0.001);
         }
     }
 }
