@@ -190,5 +190,16 @@ public class SomeArray {
         }
         return false;
     }
+
+    //Task16
+    public static boolean checkNullInSomeArray(Integer[] someArray) {
+        for (Integer integer : someArray) {
+            if (integer == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
 
