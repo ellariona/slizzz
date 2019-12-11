@@ -117,5 +117,14 @@ public class SomeArrayTest {
             System.out.println(v);
         }
     }
+
+    //Task 13
+    @Test
+    public void testCreateSomeArraySymmetric() {
+        int[] array = SomeArray.createSomeArraySymmetric(lengthArrayTest);
+        for (int i = 0; i < array.length; i++) {
+            assertEquals(array[i], array[lengthArrayTest - i - 1], 0.001);
+        }
+    }
 }
 
