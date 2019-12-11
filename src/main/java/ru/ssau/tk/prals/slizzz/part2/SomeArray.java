@@ -175,11 +175,20 @@ public class SomeArray {
     }
 
     //Task14
-    public static double[] oppositeSomeArray(double[] someArray) {
+    public static void oppositeSomeArray(double[] someArray) {
         for (int i = 0; i < someArray.length; i++) {
             someArray[i] = -someArray[i];
         }
-        return someArray;
+    }
+
+    //Task15
+    public static boolean checkNumberInSomeArray(double[] someArray, int number) {
+        for (double value : someArray) {
+            if (value == number) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 

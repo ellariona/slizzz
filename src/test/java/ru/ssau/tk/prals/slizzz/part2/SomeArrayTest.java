@@ -136,7 +136,15 @@ public class SomeArrayTest {
         assertEquals(array[1], -3, 0.001);
         assertEquals(array[2], -4, 0.001);
         assertEquals(array[3], -5, 0.001);
+    }
 
+    //Task15
+    @Test
+    public void testCheckNumberInSomeArray() {
+        double[] array = new double[]{1., 3., 4., 5};
+        assertFalse(SomeArray.checkNumberInSomeArray(array, 9));
+        assertTrue(SomeArray.checkNumberInSomeArray(array, 3));
+        assertFalse(SomeArray.checkNumberInSomeArray(array, 50));
     }
 }
 
