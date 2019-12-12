@@ -299,5 +299,21 @@ public class SomeArray {
         }
         return someBooleanArray;
     }
+
+    //Task30
+    public static int[][] createSomeArrayMultipleArray(int number) {
+        int[][] someArray = new int[number][];
+        for (int i = 0; i < number; i++) {
+            someArray[i] = new int[number - i];
+        }
+        int k = 1;
+        for (int i = 0; i < number; i++) {
+            for (int j = 0; j < number - i; j++) {
+                someArray[i][j] = k;
+                k++;
+            }
+        }
+        return someArray;
+    }
 }
 

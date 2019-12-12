@@ -228,5 +228,16 @@ public class SomeArrayTest {
         assertFalse(result[4]);
         assertTrue(result[5]);
     }
-}
+
+    //Task30
+    @Test
+    public void createSomeArrayMultipleArray() {
+        int[][] arr = SomeArray.createSomeArrayMultipleArray(lengthArrayTest);
+        int k = 1;
+        for (int i = 0; i < lengthArrayTest; i++) {
+            for (int j = 0; j < arr[i].length; j++)
+                assertEquals(arr[i][j], k++, 0.001);
+            }
+        }
+    }
 
