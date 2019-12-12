@@ -201,6 +201,7 @@ public class SomeArray {
         return false;
     }
 
+    //Task17
     public static int countEvenNumbersInSomeArray(int[] someArray) {
         int count = 0;
         for (int value : someArray) {
@@ -211,5 +212,17 @@ public class SomeArray {
         return count;
     }
 
+    //Task18
+    public static Integer findMaxNumberInSomeArray(Integer[] someArray) {
+        if (someArray.length == 0)
+            return null;
+        Integer max = someArray[0];
+        for (int i = 1; i < someArray.length; i++) {
+            if (someArray[i] > max) {
+                max = someArray[i];
+            }
+        }
+        return max;
+    }
 }
 
