@@ -233,5 +233,17 @@ public class SomeArray {
         }
         return sum;
     }
+
+    //Task20
+    public static boolean checkNumDevidersInSomeArray(int[] someArray) {
+        int divideByFirst = 0, divideByLast = 0;
+        for (int i = 0; i < someArray.length; i += 2) {
+            if (someArray[i] % someArray[0] == 0)
+                divideByFirst++;
+            if (someArray[i] % someArray[someArray.length - 1] == 0)
+                divideByLast++;
+        }
+        return divideByFirst > divideByLast;
+    }
 }
 
