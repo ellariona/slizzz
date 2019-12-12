@@ -290,5 +290,14 @@ public class SomeArray {
         someArray[maxIndex] = minNumber;
         someArray[minIndex] = maxNumber;
     }
+
+    //Task27
+    public static boolean[] makeBooleanSomeArray(int[] someArray) {
+        boolean[] someBooleanArray = new boolean[someArray.length];
+        for (int i = 0; i < someArray.length; i++) {
+            someBooleanArray[i] = someArray[i] % 2 == 0;
+        }
+        return someBooleanArray;
+    }
 }
 

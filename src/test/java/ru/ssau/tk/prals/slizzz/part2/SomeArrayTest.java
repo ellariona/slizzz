@@ -216,5 +216,17 @@ public class SomeArrayTest {
         assertEquals(array[1], 0, 0.001);
         assertEquals(array[8], 5, 0.001);
     }
+
+    //Task27
+    @Test
+    public void testMakeBooleanSomeArray() {
+        boolean[] result = SomeArray.makeBooleanSomeArray(new int[]{1, 2, 3, 4, 5, 6});
+        assertFalse(result[0]);
+        assertTrue(result[1]);
+        assertFalse(result[2]);
+        assertTrue(result[3]);
+        assertFalse(result[4]);
+        assertTrue(result[5]);
+    }
 }
 
