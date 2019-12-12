@@ -196,12 +196,25 @@ public class SomeArrayTest {
 
     //Task22
     @Test
-    public void equalsElementIndexInSomeArray() {
+    public void testEqualsElementIndexInSomeArray() {
         var arr = new Number[]{1, 2, 3, 4, 5};
         for (int i = 1; i < 6; i++) {
             assertEquals(SomeArray.equalsElementIndexInSomeArray(arr, i), i - 1, 0.001);
         }
         assertEquals(SomeArray.equalsElementIndexInSomeArray(arr, 0), -1, 0.001);
+    }
+
+    //Task23
+    @Test
+    public void testSwapFirstMaxAndMinNumInSomeArray() {
+        int[] array = new int[]{1, 2, 3, 4, 7, 3};
+        SomeArray.swapFirstMaxAndMinNumInSomeArray(array);
+        assertEquals(array[0], 7, 0.001);
+        assertEquals(array[4], 1, 0.001);
+        array = new int[]{1, 5, 3, 4, 5, 4, 3, 2, 0};
+        SomeArray.swapFirstMaxAndMinNumInSomeArray(array);
+        assertEquals(array[1], 0, 0.001);
+        assertEquals(array[8], 5, 0.001);
     }
 }
 
