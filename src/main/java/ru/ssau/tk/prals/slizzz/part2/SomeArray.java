@@ -263,5 +263,15 @@ public class SomeArray {
         }
         return maxNum;
     }
+
+    //Task22
+    static int equalsElementIndexInSomeArray(Number[] arr, Number found) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals(found)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
 

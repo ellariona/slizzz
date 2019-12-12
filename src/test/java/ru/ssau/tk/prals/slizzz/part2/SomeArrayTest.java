@@ -176,7 +176,7 @@ public class SomeArrayTest {
     public void testSumEvenIndexNumbersInSomeArray() {
         double[] array = new double[]{2., 4., 5.};
         assertEquals(SomeArray.sumEvenIndexNumbersInSomeArray(array), 7., 0.00001);
-        double[] arrayTwo= new double[]{2., 10., 10., 10., 5., 18., 1., 3.};
+        double[] arrayTwo = new double[]{2., 10., 10., 10., 5., 18., 1., 3.};
         assertEquals(SomeArray.sumEvenIndexNumbersInSomeArray(arrayTwo), 18., 0.00001);
     }
 
@@ -192,6 +192,16 @@ public class SomeArrayTest {
     public void testFindMostPopularNumInSomeArray() {
         assertEquals(SomeArray.findMostPopularNumInSomeArray(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6}), 2);
         assertEquals(SomeArray.findMostPopularNumInSomeArray(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 1}), 1);
+    }
+
+    //Task22
+    @Test
+    public void equalsElementIndexInSomeArray() {
+        var arr = new Number[]{1, 2, 3, 4, 5};
+        for (int i = 1; i < 6; i++) {
+            assertEquals(SomeArray.equalsElementIndexInSomeArray(arr, i), i - 1, 0.001);
+        }
+        assertEquals(SomeArray.equalsElementIndexInSomeArray(arr, 0), -1, 0.001);
     }
 }
 
