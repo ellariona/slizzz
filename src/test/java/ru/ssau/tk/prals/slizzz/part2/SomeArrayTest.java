@@ -170,5 +170,14 @@ public class SomeArrayTest {
         assertNull(SomeArray.findMaxNumberInSomeArray(new Integer[]{}));
         assertEquals(SomeArray.findMaxNumberInSomeArray(new Integer[]{12, 30, 5, 2}), (Integer) 30);
     }
+
+    //Task19
+    @Test
+    public void testSumEvenIndexNumbersInSomeArray() {
+        double[] array = new double[]{2., 4., 5.};
+        assertEquals(SomeArray.sumEvenIndexNumbersInSomeArray(array), 7., 0.00001);
+        double[] arrayTwo= new double[]{2., 10., 10., 10., 5., 18., 1., 3.};
+        assertEquals(SomeArray.sumEvenIndexNumbersInSomeArray(arrayTwo), 18., 0.00001);
+    }
 }
 
