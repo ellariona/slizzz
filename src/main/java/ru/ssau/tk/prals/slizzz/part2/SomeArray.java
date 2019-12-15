@@ -291,6 +291,13 @@ public class SomeArray {
         someArray[minIndex] = maxNumber;
     }
 
+    //Task24
+    public static void bitwiseNegationInSomeArray(int[] someArray) {
+        for (int i = 0; i < someArray.length; i++) {
+            someArray[i] = ~someArray[i];
+        }
+    }
+
     //Task27
     public static boolean[] makeBooleanSomeArray(int[] someArray) {
         boolean[] someBooleanArray = new boolean[someArray.length];
