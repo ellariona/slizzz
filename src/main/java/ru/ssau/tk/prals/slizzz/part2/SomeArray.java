@@ -326,6 +326,19 @@ public class SomeArray {
         return someBooleanArray;
     }
 
+    //Task29
+    static int[] naturalArrayNumbersWithIndexInSomeArray(int length, int index) {
+        int[] result = new int[length];
+        int j = index;
+        for (int i = 0; i < length; i++) {
+            result[i] = j++;
+            if (j == length + 1 && (length - i) % index == 0) {
+                j = 1;
+            }
+        }
+        return result;
+    }
+
     //Task30
     static int[][] createSomeArrayMultipleArray(int number) {
         int[][] someArray = new int[number][];

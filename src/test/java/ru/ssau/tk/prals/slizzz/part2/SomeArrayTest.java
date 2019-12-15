@@ -266,6 +266,24 @@ public class SomeArrayTest {
         assertTrue(result[5]);
     }
 
+    //Task29
+    @Test
+    public void testNaturalArrayNumbersWithIndexInSomeArray() {
+        int[] array = SomeArray.naturalArrayNumbersWithIndexInSomeArray(6, 2);
+        assertEquals(array[0], 2, 0.0001);
+        assertEquals(array[1], 3, 0.0001);
+        assertEquals(array[2], 4, 0.0001);
+        assertEquals(array[3], 5, 0.0001);
+        assertEquals(array[4], 6, 0.0001);
+        assertEquals(array[5], 1, 0.0001);
+        array = SomeArray.naturalArrayNumbersWithIndexInSomeArray(5, 3);
+        assertEquals(array[0], 3, 0.0001);
+        assertEquals(array[1], 4, 0.0001);
+        assertEquals(array[2], 5, 0.0001);
+        assertEquals(array[3], 1, 0.0001);
+        assertEquals(array[4], 2, 0.0001);
+    }
+
     //Task30
     @Test
     public void createSomeArrayMultipleArray() {
