@@ -232,6 +232,16 @@ public class SomeArrayTest {
         }
     }
 
+    //Task25
+    @Test
+    public void testNegateSomeArray() {
+        int[] array = new int[]{4, 3, 2, 1};
+        int[] arrayOne = SomeArray.negateSomeArray(array);
+        for (int i = 0; i < array.length; i++) {
+            assertEquals(array[i] + arrayOne[i], -1, 0.001);
+        }
+    }
+
     //Task27
     @Test
     public void testMakeBooleanSomeArray() {
