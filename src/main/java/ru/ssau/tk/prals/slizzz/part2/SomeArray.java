@@ -2,12 +2,12 @@ package ru.ssau.tk.prals.slizzz.part2;
 
 public class SomeArray {
     //Task 1
-    public static int[] createSomeArray1(int length) {
+    static int[] createSomeArray1(int length) {
         return new int[length];
     }
 
     //Task 2
-    public static int[] createSomeArray2(int length) {
+    static int[] createSomeArray2(int length) {
         int[] someArray = new int[length];
         for (int i = 0; i < length; i++) {
             if (i == 0 || i == length - 1) {
@@ -20,7 +20,7 @@ public class SomeArray {
     }
 
     //Task 3
-    public static int[] createSomeArrayRisingOdd(int length) {
+    static int[] createSomeArrayRisingOdd(int length) {
         int[] someArray = new int[length];
         for (int i = 1; i <= length; i++) {
             someArray[i - 1] = 2 * i - 1;
@@ -29,7 +29,7 @@ public class SomeArray {
     }
 
     //Task 4
-    public static int[] createSomeArrayDownEven(int length) {
+    static int[] createSomeArrayDownEven(int length) {
         int[] someArray = new int[length];
         for (int i = length - 1; i >= 0; i--) {
             someArray[i] = 2 * (length - i);
@@ -38,7 +38,7 @@ public class SomeArray {
     }
 
     //Task 5
-    public static int[] createSomeArrayFibonacci(int length) {
+    static int[] createSomeArrayFibonacci(int length) {
         int[] someArray = new int[length];
         int a = 0, b = 1, next;
         for (int i = 0; i < length; i++) {
@@ -51,7 +51,7 @@ public class SomeArray {
     }
 
     //Task 6
-    public static int[] createSomeArraySquareIndex(int length) {
+    static int[] createSomeArraySquareIndex(int length) {
         int[] someArray = new int[length];
         for (int i = 0; i < length; i++) {
             someArray[i] = i * i;
@@ -60,7 +60,7 @@ public class SomeArray {
     }
 
     //Task 7
-    public static double[] createSomeArraySquareEquation(double a, double b, double c) {
+    static double[] createSomeArraySquareEquation(double a, double b, double c) {
         double v = b * b - 4 * a * c;
         if (v > 0) {
             double x1 = (-b + Math.sqrt(v)) / (2 * a);
@@ -80,7 +80,7 @@ public class SomeArray {
     }
 
     //Task 8
-    public static int[] createSomeArrayNaturalNumber(int length) {
+    static int[] createSomeArrayNaturalNumber(int length) {
         int[] someArray = new int[length];
         int num = 1;
         for (int i = 0; i < length; i++) {
@@ -94,7 +94,7 @@ public class SomeArray {
     }
 
     //Task9
-    public static double[] createSomeArrayArithmeticProgression(int length, int firstElement, int difference) {
+    static double[] createSomeArrayArithmeticProgression(int length, int firstElement, int difference) {
         double[] someArray = new double[length];
         someArray[0] = firstElement;
         for (int i = 1; i < length; i++) {
@@ -104,7 +104,7 @@ public class SomeArray {
     }
 
     //Task10
-    public static double[] createSomeArrayGeometricProgression(int length, int firstElement, int factor) {
+    static double[] createSomeArrayGeometricProgression(int length, int firstElement, int factor) {
         double[] someArray = new double[length];
         someArray[0] = firstElement;
         for (int i = 1; i < length; i++) {
@@ -114,7 +114,7 @@ public class SomeArray {
     }
 
     //Task 11
-    public static double[] createSomeArrayOfDivers(int number) {
+    static double[] createSomeArrayOfDivers(int number) {
 
         int length = 1;
         for (int i = 1; i <= number / 2; i++) {
@@ -135,7 +135,7 @@ public class SomeArray {
     }
 
     //Task12
-    public static double[] createSomeArrayPrimeNumbers(int number) {
+    static double[] createSomeArrayPrimeNumbers(int number) {
         int dividers = 0, length = 0;
         for (int i = 1; i < number; i++) {
             for (int k = 1; k <= i; k++) {
@@ -162,7 +162,7 @@ public class SomeArray {
     }
 
     //Task13
-    public static int[] createSomeArraySymmetric(int length) {
+    static int[] createSomeArraySymmetric(int length) {
         int[] someArray = new int[length];
         for (int i = 1; i < length / 2 + 1; i++) {
             someArray[i - 1] = i;
@@ -175,14 +175,14 @@ public class SomeArray {
     }
 
     //Task14
-    public static void oppositeSomeArray(double[] someArray) {
+    static void oppositeSomeArray(double[] someArray) {
         for (int i = 0; i < someArray.length; i++) {
             someArray[i] = -someArray[i];
         }
     }
 
     //Task15
-    public static boolean checkNumberInSomeArray(double[] someArray, int number) {
+    static boolean checkNumberInSomeArray(double[] someArray, int number) {
         for (double value : someArray) {
             if (value == number) {
                 return true;
@@ -192,7 +192,7 @@ public class SomeArray {
     }
 
     //Task16
-    public static boolean checkNullInSomeArray(Integer[] someArray) {
+    static boolean checkNullInSomeArray(Integer[] someArray) {
         for (Integer integer : someArray) {
             if (integer == null) {
                 return true;
@@ -202,7 +202,7 @@ public class SomeArray {
     }
 
     //Task17
-    public static int countEvenNumbersInSomeArray(int[] someArray) {
+    static int countEvenNumbersInSomeArray(int[] someArray) {
         int count = 0;
         for (int value : someArray) {
             if (value % 2 == 0) {
@@ -213,7 +213,7 @@ public class SomeArray {
     }
 
     //Task18
-    public static Integer findMaxNumberInSomeArray(Integer[] someArray) {
+    static Integer findMaxNumberInSomeArray(Integer[] someArray) {
         if (someArray.length == 0)
             return null;
         Integer max = someArray[0];
@@ -226,7 +226,7 @@ public class SomeArray {
     }
 
     //Task19
-    public static double sumEvenIndexNumbersInSomeArray(double[] someArray) {
+    static double sumEvenIndexNumbersInSomeArray(double[] someArray) {
         int sum = 0;
         for (int i = 0; i < someArray.length; i += 2) {
             sum += someArray[i];
@@ -235,7 +235,7 @@ public class SomeArray {
     }
 
     //Task20
-    public static boolean checkNumDevidersInSomeArray(int[] someArray) {
+    static boolean checkNumDevidersInSomeArray(int[] someArray) {
         int divideByFirst = 0, divideByLast = 0;
         for (int i = 0; i < someArray.length; i += 2) {
             if (someArray[i] % someArray[0] == 0)
@@ -247,7 +247,7 @@ public class SomeArray {
     }
 
     //Task21
-    public static int findMostPopularNumInSomeArray(int[] someArray) {
+    static int findMostPopularNumInSomeArray(int[] someArray) {
         int count = 0, maxCount = 0, currentNum, maxNum = 0;
         for (int value : someArray) {
             currentNum = value;
@@ -275,7 +275,7 @@ public class SomeArray {
     }
 
     //Task23
-    public static void swapFirstMaxAndMinNumInSomeArray(int[] someArray) {
+    static void swapFirstMaxAndMinNumInSomeArray(int[] someArray) {
         int maxNumber = someArray[0], minNumber = someArray[0], maxIndex = 0, minIndex = 0;
         for (int i = 1; i < someArray.length; i++) {
             if (someArray[i] > maxNumber) {
@@ -292,14 +292,14 @@ public class SomeArray {
     }
 
     //Task24
-    public static void bitwiseNegationInSomeArray(int[] someArray) {
+    static void bitwiseNegationInSomeArray(int[] someArray) {
         for (int i = 0; i < someArray.length; i++) {
             someArray[i] = ~someArray[i];
         }
     }
 
     //Task25
-    public static int[] negateSomeArray(int[] someArray) {
+    static int[] negateSomeArray(int[] someArray) {
         int[] newSomeArray = new int[someArray.length];
         for (int i = 0; i < someArray.length; i++) {
             newSomeArray[i] = ~someArray[i];
@@ -307,8 +307,18 @@ public class SomeArray {
         return newSomeArray;
     }
 
+    //Task26
+    static int[] pairSumInSomeArray(int[] someArray) {
+        int[] result = new int[someArray.length / 2 + (someArray.length % 2 == 0 ? 0 : 1)];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = someArray[2 * i] + (2 * i + 1 < someArray.length ? someArray[2 * i + 1] : 0);
+        }
+        return result;
+    }
+
+
     //Task27
-    public static boolean[] makeBooleanSomeArray(int[] someArray) {
+    static boolean[] makeBooleanSomeArray(int[] someArray) {
         boolean[] someBooleanArray = new boolean[someArray.length];
         for (int i = 0; i < someArray.length; i++) {
             someBooleanArray[i] = someArray[i] % 2 == 0;
@@ -317,7 +327,7 @@ public class SomeArray {
     }
 
     //Task30
-    public static int[][] createSomeArrayMultipleArray(int number) {
+    static int[][] createSomeArrayMultipleArray(int number) {
         int[][] someArray = new int[number][];
         for (int i = 0; i < number; i++) {
             someArray[i] = new int[number - i];
