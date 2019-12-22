@@ -387,6 +387,18 @@ public class SomeArray {
             System.out.println(string);
         }
     }
+
+    //Task 34
+    static double multiInSomeArray(double[] someArray) {
+        double value = 1;
+        for (double v : someArray) {
+            if (!(Double.isNaN(v) || v == Double.NEGATIVE_INFINITY || v == Double.POSITIVE_INFINITY || v == 0)) {
+                value *= v;
+            }
+        }
+        return value;
+    }
 }
+
 
 
