@@ -380,6 +380,13 @@ public class SomeArray {
         }
         Arrays.sort(someArray);
     }
+
+    //Task33
+    static void stringsInSomeArray(String[] someArray) {
+        for (String string : someArray) {
+            System.out.println(string);
+        }
+    }
 }
 
 

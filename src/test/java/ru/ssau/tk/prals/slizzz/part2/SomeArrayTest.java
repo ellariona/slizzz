@@ -331,4 +331,11 @@ public class SomeArrayTest {
             assertTrue(array[i] < array[i + 1]);
         }
     }
+
+    //Task23
+    @Test
+    public void testStringsInSomeArray() {
+        String[] array = new String[]{"У", "меня", "скоро", "зачет", ":)"};
+        SomeArray.stringsInSomeArray(array);
+    }
 }
