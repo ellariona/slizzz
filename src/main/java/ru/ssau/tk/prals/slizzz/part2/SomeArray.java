@@ -1,6 +1,8 @@
 package ru.ssau.tk.prals.slizzz.part2;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.LinkedList;
 
 public class SomeArray {
     //Task 1
@@ -397,6 +399,14 @@ public class SomeArray {
             }
         }
         return value;
+    }
+
+    //Task35
+    //Task35
+    static Collection<String> toHexInSomeArray(int[] someArray) {
+        Collection<String> hexStrings = new LinkedList<>();
+        java.util.Arrays.stream(someArray).forEach(value -> hexStrings.add(Integer.toHexString(value)));
+        return hexStrings;
     }
 }
 

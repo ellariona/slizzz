@@ -2,6 +2,8 @@ package ru.ssau.tk.prals.slizzz.part2;
 
 import org.testng.annotations.Test;
 
+import java.util.Collection;
+
 import static org.testng.Assert.*;
 
 public class SomeArrayTest {
@@ -346,5 +348,15 @@ public class SomeArrayTest {
         assertEquals(SomeArray.multiInSomeArray(array), 2 * 3 * 4 * 5 * 6, 0.0001);
         array = new double[]{9, 2, 3, 4, 0, Double.NEGATIVE_INFINITY, 5, 6, Double.POSITIVE_INFINITY};
         assertEquals(SomeArray.multiInSomeArray(array), 9 * 2 * 3 * 4 * 5 * 6, 0.0001);
+    }
+
+    //Task35
+    @Test
+    public void testToHexInSomeArray() {
+        int[] array = new int[]{1, 2, 3, 4, 5};
+        Collection<String> hexStrings = SomeArray.toHexInSomeArray(array);
+        for (String hexString : hexStrings) {
+            System.out.println(hexString);
+        }
     }
 }
