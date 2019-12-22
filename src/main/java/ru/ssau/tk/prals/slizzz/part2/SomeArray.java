@@ -1,5 +1,7 @@
 package ru.ssau.tk.prals.slizzz.part2;
 
+import java.util.Arrays;
+
 public class SomeArray {
     //Task 1
     static int[] createSomeArray1(int length) {
@@ -368,5 +370,16 @@ public class SomeArray {
         }
         return someArray;
     }
+
+    //Task32
+    static void sortNaNInSomeArray(Double[] someArray) {
+        for (Double number : someArray) {
+            if (number.isNaN()) {
+                return;
+            }
+        }
+        Arrays.sort(someArray);
+    }
 }
+
 
