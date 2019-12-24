@@ -30,7 +30,7 @@ public class SomeStringsTest {
     //Task4
     @Test
     public void testPalindromeSomeStrings() {
-        assertFalse(SomeStrings.palindromeSomeStrings("Madam i am Adam"));
+        assertTrue(SomeStrings.palindromeSomeStrings("bzzb"));
         assertFalse(SomeStrings.palindromeSomeStrings("Liza"));
     }
 }
