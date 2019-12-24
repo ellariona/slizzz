@@ -8,17 +8,24 @@ public class SomeStringsTest {
     private String string = "когда каникулы :(";
 
 
-    //task1
+    //Task1
     @Test
     public void testEachCharacterSomeStrings() {
         SomeStrings.eachCharacterSomeStrings(string);
     }
 
-    //task2
+    //Task2
     @Test
     public void testPrintBytesSomeStrings()
     {
         SomeStrings.printBytesSomeStrings(string);
         System.out.println();
+    }
+
+    //Task3
+    @Test
+    public void testCompareSomeStrings()
+    {
+        SomeStrings.compareSomeStrings();
     }
 }
