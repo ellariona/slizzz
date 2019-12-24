@@ -35,4 +35,14 @@ public class Matrices {
         }
         return null;
     }
+
+    static Matrix multiplicationMatrixAtNumber(Matrix matrix, double number) {
+        Matrix result = new Matrix(matrix.getRows(), matrix.getColumns());
+        for (int i = 0; i < matrix.getRows(); i++) {
+            for (int j = 0; j < matrix.getColumns(); j++) {
+                result.setAt(i, j, matrix.getAt(i, j) * number);
+            }
+        }
+        return result;
+    }
 }

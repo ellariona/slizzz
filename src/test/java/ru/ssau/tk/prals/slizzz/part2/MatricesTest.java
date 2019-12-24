@@ -32,4 +32,11 @@ public class MatricesTest {
         assert result != null;
         assertEquals(result.getAt(0, 0), 1 + 2 * 2 + 3 * 5, 0.001);
     }
+
+    @Test
+    public void testMultiplicationMatrixAtNumber() {
+        Matrix result = Matrices.multiplicationMatrixAtNumber(first, 3);
+        assertEquals(result.getAt(0, 0), first.getAt(0, 0) * 3, 0.001);
+        assertEquals(result.getAt(1, 1), first.getAt(1, 1) * 3, 0.001);
+    }
 }
