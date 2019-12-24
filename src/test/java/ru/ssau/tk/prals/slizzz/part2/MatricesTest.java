@@ -8,7 +8,7 @@ public class MatricesTest {
     private Matrix first = new Matrix(new double[][]{{1, 2}, {3, 4}});
     private Matrix second = new Matrix(new double[][]{{1, 2, 3}, {3, 4, 5}, {6, 7, 8}});
     private Matrix third = new Matrix(new double[][]{{1, 2}, {2, 3}});
-    Matrix four = new Matrix(new double[][]{{1, 2}, {2, 3}, {5, 6}});
+    private Matrix four = new Matrix(new double[][]{{1, 2}, {2, 3}, {5, 6}});
 
     @Test
     public void testSumMatrix() {
@@ -35,8 +35,19 @@ public class MatricesTest {
 
     @Test
     public void testMultiplicationMatrixAtNumber() {
-        Matrix result = Matrices.multiplicationMatrixAtNumber(first, 3);
+        Matrix result = Matrices.multiplicationMatrixAtNumber(first);
         assertEquals(result.getAt(0, 0), first.getAt(0, 0) * 3, 0.001);
         assertEquals(result.getAt(1, 1), first.getAt(1, 1) * 3, 0.001);
+    }
+
+    @Test
+    public void testMatrixDeterminant() {
+        Matrix firstMatrix = new Matrix(2, 3);
+        firstMatrix.setAt(0, 0, 1);
+        firstMatrix.setAt(0, 1, 2);
+        firstMatrix.setAt(1, 0, 3);
+        firstMatrix.setAt(1, 1, 4);
+        double secondResult = Matrices.matrixDeterminant(firstMatrix);
+        assertEquals(secondResult, -2);
     }
 }
