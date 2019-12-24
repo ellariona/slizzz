@@ -16,16 +16,21 @@ public class SomeStringsTest {
 
     //Task2
     @Test
-    public void testPrintBytesSomeStrings()
-    {
+    public void testPrintBytesSomeStrings() {
         SomeStrings.printBytesSomeStrings(string);
         System.out.println();
     }
 
     //Task3
     @Test
-    public void testCompareSomeStrings()
-    {
+    public void testCompareSomeStrings() {
         SomeStrings.compareSomeStrings();
+    }
+
+    //Task4
+    @Test
+    public void testPalindromeSomeStrings() {
+        assertFalse(SomeStrings.palindromeSomeStrings("Madam i am Adam"));
+        assertFalse(SomeStrings.palindromeSomeStrings("Liza"));
     }
 }
