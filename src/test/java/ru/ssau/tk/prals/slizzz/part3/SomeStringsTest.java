@@ -48,6 +48,13 @@ public class SomeStringsTest {
         assertEquals(SomeStrings.firstContainIndexInSomeStrings("abcdeabcde", "de"), 3, 0.001);
         assertEquals(SomeStrings.firstContainIndexInSomeStrings("abcabcabc", "ca"), 2, 0.001);
         assertEquals(SomeStrings.firstContainIndexInSomeStrings("aacvav", "el"), -1, 0.001);
+    }
 
+    //Task8
+    @Test
+    public void testContainIndexInSomeArray() {
+        assertEquals(SomeStrings.containIndexInSomeArray("abcdabc", "abc"), 4, 0.0001);
+        assertEquals(SomeStrings.containIndexInSomeArray("abcddabc", "abc"), 5, 0.0001);
+        assertEquals(SomeStrings.containIndexInSomeArray("abcdabcabc", "ab"), 7, 0.0001);
     }
 }

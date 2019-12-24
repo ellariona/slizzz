@@ -49,4 +49,15 @@ public class SomeStrings {
             return -1;
         }
     }
+
+    //Task8
+    static int containIndexInSomeArray(String stringOne, String stringTwo) {
+        if (stringOne.contains(stringTwo)) {
+            return stringOne.indexOf(stringTwo, stringOne.length() / 2);
+        } else if (stringOne.contains(stringOne)) {
+            return stringTwo.indexOf(stringOne, stringTwo.length() / 2);
+        } else {
+            return -1;
+        }
+    }
 }
