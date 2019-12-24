@@ -33,4 +33,12 @@ public class SomeStringsTest {
         assertTrue(SomeStrings.palindromeSomeStrings("bzzb"));
         assertFalse(SomeStrings.palindromeSomeStrings("Liza"));
     }
+
+    //Task5
+    @Test
+    public void testIsEqualsCaseSomeArray() {
+        assertTrue(SomeStrings.isEqualsCaseSomeArray("abc", "ABC"));
+        assertFalse(SomeStrings.isEqualsCaseSomeArray(null, "ABC"));
+        assertFalse(SomeStrings.isEqualsCaseSomeArray("abc", "abc"));
+    }
 }
