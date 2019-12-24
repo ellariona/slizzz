@@ -5,19 +5,19 @@ public class Matrix {
     private final int rows;
     private final int columns;
 
-    public Matrix() {
+    Matrix() {
         rows = 0;
         columns = 0;
         matrix = new double[rows][columns];
     }
 
-    public Matrix(double[][] matrix) {
+    Matrix(double[][] matrix) {
         rows = matrix.length;
         columns = matrix[0].length;
         this.matrix = matrix;
     }
 
-    public Matrix(int rows, int columns) {
+    Matrix(int rows, int columns) {
         this.rows = rows;
         this.columns = columns;
         matrix = new double[rows][columns];
