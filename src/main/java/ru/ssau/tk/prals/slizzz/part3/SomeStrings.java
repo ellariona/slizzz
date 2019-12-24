@@ -60,4 +60,26 @@ public class SomeStrings {
             return -1;
         }
     }
+
+    //Task9
+    static int lastContainIndexInFirstHalfInSomeStrings(String stringOne, String stringTwo) {
+        if (stringOne.contains(stringTwo)) {
+            return stringOne.lastIndexOf(stringTwo, stringOne.length() / 2);
+        } else if (stringTwo.contains(stringOne)) {
+            return stringTwo.lastIndexOf(stringOne, stringTwo.length() / 2);
+        } else {
+            return -1;
+        }
+    }
+
+    //Task10
+    static int stringsStartsEndsWithInSomeArray(String[] strings, String prefix, String suffix) {
+        int k = 0;
+        for (String string : strings) {
+            if (string.startsWith(prefix) && string.endsWith(suffix)) {
+                k++;
+            }
+        }
+        return k;
+    }
 }

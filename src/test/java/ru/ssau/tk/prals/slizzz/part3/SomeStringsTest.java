@@ -53,8 +53,23 @@ public class SomeStringsTest {
     //Task8
     @Test
     public void testContainIndexInSomeArray() {
-        assertEquals(SomeStrings.containIndexInSomeArray("abcdabc", "abc"), 4, 0.0001);
-        assertEquals(SomeStrings.containIndexInSomeArray("abcddabc", "abc"), 5, 0.0001);
-        assertEquals(SomeStrings.containIndexInSomeArray("abcdabcabc", "ab"), 7, 0.0001);
+        assertEquals(SomeStrings.containIndexInSomeArray("abcdabc", "abc"), 4, 0.001);
+        assertEquals(SomeStrings.containIndexInSomeArray("abcddabc", "abc"), 5, 0.001);
+        assertEquals(SomeStrings.containIndexInSomeArray("abcdabcabc", "ab"), 7, 0.001);
+    }
+
+    //Task9
+    @Test
+    public void testLastContainIndexInFirstHalfInSomeStrings() {
+        assertEquals(SomeStrings.lastContainIndexInFirstHalfInSomeStrings("abcdabc", "abc"), 0, 0.001);
+        assertEquals(SomeStrings.lastContainIndexInFirstHalfInSomeStrings("abcabdbabcabc", "ab"), 3, 0.001);
+        assertEquals(SomeStrings.lastContainIndexInFirstHalfInSomeStrings("cabcca", "ol"), -1, 0.001);
+    }
+
+    //Task10
+    @Test
+    public void testStringsStartsEndsWithInSomeArray() {
+        assertEquals(SomeStrings.stringsStartsEndsWithInSomeArray(new String[]{"abcde", "abbde", "abbde", "abfde"}, "ab", "de"), 4, 0.001);
+        assertEquals(SomeStrings.stringsStartsEndsWithInSomeArray(new String[]{"abcde", "abbde", "abbe", "abfe"}, "ab", "de"), 2, 0.001);
     }
 }
