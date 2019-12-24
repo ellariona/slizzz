@@ -38,4 +38,15 @@ public class SomeStrings {
     static boolean isEqualsCaseSomeArray(String stringOne, String stringTwo) {
         return stringOne != null && stringTwo != null && !(stringOne.equals(stringTwo)) && stringOne.equalsIgnoreCase(stringTwo);
     }
+
+    //Task7
+    static int firstContainIndexInSomeStrings(String stringOne, String stringTwo) {
+        if (stringOne.contains(stringTwo)) {
+            return stringOne.indexOf(stringTwo);
+        } else if (stringTwo.contains(stringOne)) {
+            return stringTwo.indexOf(stringOne);
+        } else {
+            return -1;
+        }
+    }
 }

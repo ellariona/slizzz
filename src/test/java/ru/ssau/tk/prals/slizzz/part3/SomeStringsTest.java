@@ -41,4 +41,13 @@ public class SomeStringsTest {
         assertFalse(SomeStrings.isEqualsCaseSomeArray(null, "ABC"));
         assertFalse(SomeStrings.isEqualsCaseSomeArray("abc", "abc"));
     }
+
+    //Task7
+    @Test
+    public void testFirstContainIndexInSomeStrings() {
+        assertEquals(SomeStrings.firstContainIndexInSomeStrings("abcdeabcde", "de"), 3, 0.001);
+        assertEquals(SomeStrings.firstContainIndexInSomeStrings("abcabcabc", "ca"), 2, 0.001);
+        assertEquals(SomeStrings.firstContainIndexInSomeStrings("aacvav", "el"), -1, 0.001);
+
+    }
 }
