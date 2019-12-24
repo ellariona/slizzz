@@ -19,4 +19,17 @@ public class MatricesTest {
         assertEquals(result.getAt(1, 1), 7, 0.001);
         assertEquals(first.getAt(0, 0), 1, 0.001);
     }
+
+    @Test
+    public void testMultiplicationMatrix() {
+        assertNull(Matrices.multiplicationMatrix(first, second));
+        Matrix result = Matrices.multiplicationMatrix(first, third);
+        assert result != null;
+        assertEquals(result.getAt(0, 0), 5, 0.001);
+        assertEquals(result.getAt(1, 1), 18, 0.001);
+        assertEquals(first.getAt(0, 0), 1, 0.001);
+        result = Matrices.multiplicationMatrix(second, four);
+        assert result != null;
+        assertEquals(result.getAt(0, 0), 1 + 2 * 2 + 3 * 5, 0.001);
+    }
 }
