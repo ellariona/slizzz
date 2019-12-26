@@ -28,12 +28,17 @@ public class NamedPointTest {
     }
 
     @Test
-    public void testReset()
-    {
+    public void testReset() {
         firstPoint.reset();
         assertEquals(firstPoint.getName(), "Absent");
         thirdPoint.reset();
         assertEquals(thirdPoint.getName(), "Absent");
+    }
+
+    @Test
+    public void testToString() {
+        assertEquals(new NamedPoint(1, 2, 3, "Hello").toString(), "Hello [1.0,2.0,3.0]");
+        assertEquals(new NamedPoint(1, 2, 3).toString(), "[1.0,2.0,3.0]");
     }
 
 }
