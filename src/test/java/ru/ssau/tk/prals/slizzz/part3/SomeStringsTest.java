@@ -86,4 +86,13 @@ public class SomeStringsTest {
         assertEquals(SomeStrings.replaceSomeArray("ороророро", "оро", "ро"), "роррро");
         assertEquals(SomeStrings.replaceSomeArray("abcsde", "sd", "aa"), "abcaae");
     }
+
+    //Task13
+    @Test
+    public void testFromToInSomeString() {
+        assertEquals(SomeStrings.fromToInSomeString("abc", 0, 2), "ab");
+        assertEquals(SomeStrings.fromToInSomeString("abcsgrha", 3, 4), "s");
+        assertEquals(SomeStrings.fromToInSomeString("abc", -1, 100), "abc");
+        assertEquals(SomeStrings.fromToInSomeString("abc", 3, 2), "");
+    }
 }
