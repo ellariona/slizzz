@@ -1,5 +1,8 @@
 package ru.ssau.tk.prals.slizzz.part3;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
 public class SomeStrings {
     //Task1
     static void eachCharacterSomeStrings(String string) {
@@ -166,5 +169,11 @@ public class SomeStrings {
             builder.append(" ").append(i);
         }
         return builder.toString();
+    }
+
+    //Task23
+    static String codeInSomeStrings(String string) {
+        byte[] byteString = string.getBytes(Charset.defaultCharset());
+        return new String(byteString, StandardCharsets.UTF_16);
     }
 }

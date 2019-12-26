@@ -147,4 +147,11 @@ public class SomeStringsTest {
         assertEquals(SomeStrings.intInSomeStrings(-1), "");
         System.out.println(SomeStrings.intInSomeStrings(10000));
     }
+
+    //Task 23
+    @Test
+    public void testCodeInSomeStrings()
+    {
+        System.out.println(SomeStrings.codeInSomeStrings("abzABZ01239"));
+    }
 }
