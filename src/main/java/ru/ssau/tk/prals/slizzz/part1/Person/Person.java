@@ -8,6 +8,12 @@ public class Person {
     private int passportId;
     private Gender gender;
 
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+
     Gender getGender() {
         return gender;
     }
@@ -42,11 +48,6 @@ public class Person {
 
     //Task 2
     Person() {
-    }
-
-    Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     Person(int passportId) {

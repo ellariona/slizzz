@@ -66,4 +66,8 @@ public class PersonTest {
         assertEquals(secondPerson.getGender(), Gender.FEMALE);
     }
 
+    @Test
+    public void testToString() {
+        assertEquals(secondPerson.toString(), "Liza Serebrykova");
+    }
 }
