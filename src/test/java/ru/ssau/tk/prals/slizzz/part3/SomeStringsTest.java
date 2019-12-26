@@ -131,4 +131,12 @@ public class SomeStringsTest {
         assertEquals(SomeStrings.buildStringInSomeArray(new String[]{}), "");
         assertEquals(SomeStrings.buildStringInSomeArray(new String[]{null, "ab"}), "null, ab");
     }
+
+    //Task21
+    @Test
+    public void testBuildStringCharToIndexInSomeArray() {
+        assertEquals(SomeStrings.buildStringCharToIndexInSomeArray("liza"), "0i2a");
+        assertEquals(SomeStrings.buildStringCharToIndexInSomeArray("qwertyuiop"), "0w2r4y6i8p");
+        assertNull(SomeStrings.buildStringCharToIndexInSomeArray(null));
+    }
 }
