@@ -17,4 +17,9 @@ public class Point {
     public double length() {
         return Math.sqrt(Math.pow(x, 2.0) + Math.pow(y, 2.0) + Math.pow(z, 2.0));
     }
+
+    //Task 3.15
+    public String toString() {
+        return "[" + this.x + "," + this.y + "," + this.z + "]";
+    }
 }
