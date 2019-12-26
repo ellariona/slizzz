@@ -69,7 +69,15 @@ public class SomeStringsTest {
     //Task10
     @Test
     public void testStringsStartsEndsWithInSomeArray() {
-        assertEquals(SomeStrings.stringsStartsEndsWithInSomeArray(new String[]{"abcde", "abbde", "abbde", "abfde"}, "ab", "de"), 4, 0.001);
-        assertEquals(SomeStrings.stringsStartsEndsWithInSomeArray(new String[]{"abcde", "abbde", "abbe", "abfe"}, "ab", "de"), 2, 0.001);
+        assertEquals(SomeStrings.stringsStartsEndsWithInSomeStrings(new String[]{"abcde", "abbde", "abbde", "abfde"}, "ab", "de"), 4, 0.001);
+        assertEquals(SomeStrings.stringsStartsEndsWithInSomeStrings(new String[]{"abcde", "abbde", "abbe", "abfe"}, "ab", "de"), 2, 0.001);
+    }
+
+    //Task11
+    @Test
+    public void testStringsStartsEndsInSomeStrings() {
+        assertEquals(SomeStrings.stringsStartsEndsWithInSomeStrings(new String[]{"abbde, abbde, abfe"}, "ab", "de"), 0, 0.001);
+        assertEquals(SomeStrings.stringsStartsEndsWithInSomeStrings(new String[]{"abcde", "abbde", "abbe", "abfe"}, "ab", "de"), 2, 0.001);
+
     }
 }
