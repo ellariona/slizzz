@@ -78,6 +78,12 @@ public class SomeStringsTest {
     public void testStringsStartsEndsInSomeStrings() {
         assertEquals(SomeStrings.stringsStartsEndsInSomeStrings(new String[]{"abbde, abbde, abfe"}, "ab", "de"), 1, 0.001);
         assertEquals(SomeStrings.stringsStartsEndsInSomeStrings(new String[]{"abcde", "abbde", "abbe", "abfe"}, "ab", "de"), 4, 0.001);
+    }
 
+    //Task12
+    @Test
+    public void testReplaceSomeArray() {
+        assertEquals(SomeStrings.replaceSomeArray("ороророро", "оро", "ро"), "роррро");
+        assertEquals(SomeStrings.replaceSomeArray("abcsde", "sd", "aa"), "abcaae");
     }
 }
