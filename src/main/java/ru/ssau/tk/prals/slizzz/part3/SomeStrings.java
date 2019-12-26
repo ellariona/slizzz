@@ -135,4 +135,9 @@ public class SomeStrings {
         }
         return words;
     }
+
+    //Task20
+    static String buildStringInSomeArray(String[] subStrings) {
+        return String.join(", ", subStrings);
+    }
 }

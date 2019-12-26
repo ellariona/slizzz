@@ -121,6 +121,14 @@ public class SomeStringsTest {
         assertEquals(SomeStrings.getSingleInSomeStrings("hello i am 5 liza")[1], "I");
         assertEquals(SomeStrings.getSingleInSomeStrings("hello i am 5 liza")[2], "Am");
         assertEquals(SomeStrings.getSingleInSomeStrings("hello i am 5 liza")[4], "Liza");
+    }
 
+    //Task20
+    @Test
+    public void testBuildStringInSomeArray() {
+        assertEquals(SomeStrings.buildStringInSomeArray(new String[]{"ab", "ac"}), "ab, ac");
+        assertEquals(SomeStrings.buildStringInSomeArray(new String[]{"ab", "ac", ""}), "ab, ac, ");
+        assertEquals(SomeStrings.buildStringInSomeArray(new String[]{}), "");
+        assertEquals(SomeStrings.buildStringInSomeArray(new String[]{null, "ab"}), "null, ab");
     }
 }
