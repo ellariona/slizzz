@@ -103,15 +103,24 @@ public class SomeStringsTest {
     //Task18
     @Test
     public void testPrintsObjectInSomeArray() {
-        SomeStrings.printsObjectInSomeArray(new Person("Liza", "Serebrykova"));
-        SomeStrings.printsObjectInSomeArray(new Point(1, 2, 3));
-        SomeStrings.printsObjectInSomeArray(new NamedPoint(8, 1, 10, "First"));
+        SomeStrings.printsObjectInSomeStrings(new Person("Liza", "Serebrykova"));
+        SomeStrings.printsObjectInSomeStrings(new Point(1, 2, 3));
+        SomeStrings.printsObjectInSomeStrings(new NamedPoint(8, 1, 10, "First"));
         Matrix firstMatrix = new Matrix(2, 2);
         firstMatrix.setAt(1, 1, 10);
         firstMatrix.setAt(1, 2, 10);
         firstMatrix.setAt(2, 1, 10);
         firstMatrix.setAt(2, 2, 10);
-        SomeStrings.printsObjectInSomeArray(firstMatrix);
+        SomeStrings.printsObjectInSomeStrings(firstMatrix);
     }
 
+    //Task19
+    @Test
+    public void testGetSingleInSomeStrings() {
+        assertEquals(SomeStrings.getSingleInSomeStrings("hello i am 5 liza")[0], "Hello");
+        assertEquals(SomeStrings.getSingleInSomeStrings("hello i am 5 liza")[1], "I");
+        assertEquals(SomeStrings.getSingleInSomeStrings("hello i am 5 liza")[2], "Am");
+        assertEquals(SomeStrings.getSingleInSomeStrings("hello i am 5 liza")[4], "Liza");
+
+    }
 }
