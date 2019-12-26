@@ -6,6 +6,8 @@ import ru.ssau.tk.prals.slizzz.part1.Point.NamedPoint;
 import ru.ssau.tk.prals.slizzz.part1.Point.Point;
 import ru.ssau.tk.prals.slizzz.part2.Matrix;
 
+import java.nio.charset.StandardCharsets;
+
 import static org.testng.Assert.*;
 
 public class SomeStringsTest {
@@ -150,8 +152,14 @@ public class SomeStringsTest {
 
     //Task 23
     @Test
-    public void testCodeInSomeStrings()
-    {
+    public void testCodeInSomeStrings() {
         System.out.println(SomeStrings.codeInSomeStrings("abzABZ01239"));
+    }
+
+    //Task24
+    @Test
+    public void testDefaultCharsetToCharsetInSomeStrings() {
+        String string = "Я хочу зачет!";
+        SomeStrings.defaultCharsetToCharsetInSomeStrings(string, StandardCharsets.ISO_8859_1, StandardCharsets.UTF_8);
     }
 }

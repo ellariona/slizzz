@@ -176,4 +176,11 @@ public class SomeStrings {
         byte[] byteString = string.getBytes(Charset.defaultCharset());
         return new String(byteString, StandardCharsets.UTF_16);
     }
+
+    //Task24
+    public static void defaultCharsetToCharsetInSomeStrings(String string, Charset one, Charset two) {
+        String str2 = new String(string.getBytes(one),two);
+        System.out.println(java.nio.charset.Charset.defaultCharset());
+        System.out.println(str2);
+    }
 }
