@@ -117,4 +117,9 @@ public class SomeStrings {
         }
         return string.substring(from, to);
     }
+
+    //Task18
+    public static void printsObjectInSomeArray(Object object) {
+        System.out.println("Описание объекта: " + object);
+    }
 }

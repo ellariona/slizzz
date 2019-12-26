@@ -1,6 +1,10 @@
 package ru.ssau.tk.prals.slizzz.part3;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.prals.slizzz.part1.Person.Person;
+import ru.ssau.tk.prals.slizzz.part1.Point.NamedPoint;
+import ru.ssau.tk.prals.slizzz.part1.Point.Point;
+import ru.ssau.tk.prals.slizzz.part2.Matrix;
 
 import static org.testng.Assert.*;
 
@@ -95,4 +99,19 @@ public class SomeStringsTest {
         assertEquals(SomeStrings.fromToInSomeString("abc", -1, 100), "abc");
         assertEquals(SomeStrings.fromToInSomeString("abc", 3, 2), "");
     }
+
+    //Task18
+    @Test
+    public void testPrintsObjectInSomeArray() {
+        SomeStrings.printsObjectInSomeArray(new Person("Liza", "Serebrykova"));
+        SomeStrings.printsObjectInSomeArray(new Point(1, 2, 3));
+        SomeStrings.printsObjectInSomeArray(new NamedPoint(8, 1, 10, "First"));
+        Matrix firstMatrix = new Matrix(2, 2);
+        firstMatrix.setAt(1, 1, 10);
+        firstMatrix.setAt(1, 2, 10);
+        firstMatrix.setAt(2, 1, 10);
+        firstMatrix.setAt(2, 2, 10);
+        SomeStrings.printsObjectInSomeArray(firstMatrix);
+    }
+
 }

@@ -19,7 +19,7 @@ public class Matrix {
         this.matrix = matrix;
     }
 
-    Matrix(int rows, int columns) {
+    public Matrix(int rows, int columns) {
         this.rows = rows;
         this.columns = columns;
         matrix = new double[rows][columns];
@@ -37,7 +37,7 @@ public class Matrix {
         return matrix[n - 1][m - 1];
     }
 
-    void setAt(int n, int m, double value) {
+    public void setAt(int n, int m, double value) {
         matrix[n - 1][m - 1] = value;
     }
 

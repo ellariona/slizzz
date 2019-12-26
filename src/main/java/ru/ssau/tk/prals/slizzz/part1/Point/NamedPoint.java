@@ -7,7 +7,7 @@ public class NamedPoint extends Point implements Resettable {
         super(x, y, z);
     }
 
-    NamedPoint(double x, double y, double z, String name) {
+    public NamedPoint(double x, double y, double z, String name) {
         super(x, y, z);
         this.name = name;
     }
