@@ -137,12 +137,12 @@ public class SomeStrings {
     }
 
     //Task20
-    static String buildStringInSomeArray(String[] subStrings) {
+    static String buildStringInSomeStrings(String[] subStrings) {
         return String.join(", ", subStrings);
     }
 
     //Task21
-    static String buildStringCharToIndexInSomeArray(String string) {
+    static String buildStringCharToIndexInSomeStrings(String string) {
         if (string == null) {
             return null;
         }
@@ -151,6 +151,19 @@ public class SomeStrings {
             if (i % 2 == 0) {
                 builder.replace(i, i + 1, Integer.toString(i));
             }
+        }
+        return builder.toString();
+    }
+
+    //Task22
+    static String intInSomeStrings(int value) {
+        if (value <= 0) {
+            return "";
+        }
+        StringBuilder builder = new StringBuilder();
+        builder.append(0);
+        for (int i = 1; i < value; i++) {
+            builder.append(" ").append(i);
         }
         return builder.toString();
     }

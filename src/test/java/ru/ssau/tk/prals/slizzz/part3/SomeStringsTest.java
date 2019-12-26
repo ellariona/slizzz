@@ -125,18 +125,26 @@ public class SomeStringsTest {
 
     //Task20
     @Test
-    public void testBuildStringInSomeArray() {
-        assertEquals(SomeStrings.buildStringInSomeArray(new String[]{"ab", "ac"}), "ab, ac");
-        assertEquals(SomeStrings.buildStringInSomeArray(new String[]{"ab", "ac", ""}), "ab, ac, ");
-        assertEquals(SomeStrings.buildStringInSomeArray(new String[]{}), "");
-        assertEquals(SomeStrings.buildStringInSomeArray(new String[]{null, "ab"}), "null, ab");
+    public void testBuildStringInSomeStrings() {
+        assertEquals(SomeStrings.buildStringInSomeStrings(new String[]{"ab", "ac"}), "ab, ac");
+        assertEquals(SomeStrings.buildStringInSomeStrings(new String[]{"ab", "ac", ""}), "ab, ac, ");
+        assertEquals(SomeStrings.buildStringInSomeStrings(new String[]{}), "");
+        assertEquals(SomeStrings.buildStringInSomeStrings(new String[]{null, "ab"}), "null, ab");
     }
 
     //Task21
     @Test
-    public void testBuildStringCharToIndexInSomeArray() {
-        assertEquals(SomeStrings.buildStringCharToIndexInSomeArray("liza"), "0i2a");
-        assertEquals(SomeStrings.buildStringCharToIndexInSomeArray("qwertyuiop"), "0w2r4y6i8p");
-        assertNull(SomeStrings.buildStringCharToIndexInSomeArray(null));
+    public void testBuildStringCharToIndexInSomeStrings() {
+        assertEquals(SomeStrings.buildStringCharToIndexInSomeStrings("liza"), "0i2a");
+        assertEquals(SomeStrings.buildStringCharToIndexInSomeStrings("qwertyuiop"), "0w2r4y6i8p");
+        assertNull(SomeStrings.buildStringCharToIndexInSomeStrings(null));
+    }
+
+    //Task22
+    @Test
+    public void testIntInSomeStrings() {
+        assertEquals(SomeStrings.intInSomeStrings(10), "0 1 2 3 4 5 6 7 8 9");
+        assertEquals(SomeStrings.intInSomeStrings(-1), "");
+        System.out.println(SomeStrings.intInSomeStrings(10000));
     }
 }
