@@ -1,9 +1,9 @@
 package ru.ssau.tk.prals.slizzz.part1.Person;
 
 public class PersonMain {
-    static Person firstHuman = new Person();
-    static Person secondHuman = new Person();
-    static Person thirdHuman = new Person();
+    private static Person firstHuman = new Person();
+    private static Person secondHuman = new Person();
+    private static Person thirdHuman = new Person();
 
     public static void main(String[] args) {
         firstHuman.setFirstName("Ivan");

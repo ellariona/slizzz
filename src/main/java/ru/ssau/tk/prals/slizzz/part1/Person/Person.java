@@ -53,9 +53,14 @@ public class Person {
         this.passportId = passportId;
     }
 
-    public Person(String firstName, String lastName, int passportId) {
+    Person(String firstName, String lastName, int passportId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.passportId = passportId;
+    }
+
+    @Override
+    public String toString() {
+        return this.firstName + " " + this.lastName;
     }
 }
